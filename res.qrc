@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/media">
+        <file>icon/Maximize.png</file>
+        <file>icon/Minimize.png</file>
+        <file>icon/Next.png</file>
+        <file>icon/Play.png</file>
+        <file>icon/Previous.png</file>
+        <file>icon/Setting.png</file>
+        <file>icon/Stop.png</file>
+        <file>icon/VolumeCross.png</file>
+        <file>icon/VolumeLoud.png</file>
+        <file>icon/Menu.png</file>
+        <file>icon/close.png</file>
+        <file>icon/Pause.png</file>
+        <file>icon/Plus.png</file>
+        <file>icon/Search.png</file>
+        <file>icon/play.svg</file>
+        <file>icon/NextSelected.png</file>
+        <file>icon/PauseSelected.png</file>
+        <file>icon/PlaySelected.png</file>
+        <file>icon/PlusSelected.png</file>
+        <file>icon/PreviousSelected.png</file>
+        <file>icon/SearchSelected.png</file>
+        <file>icon/StopSelected.png</file>
+        <file>icon/VolumeCrossSelected.png</file>
+        <file>icon/VolumeLoudselected.png</file>
+        <file>icon/MenuSelected.png</file>
+        <file>icon/SettingSelected.png</file>
+        <file>icon/Net.png</file>
+        <file>icon/NetSelected.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>style.qss</file>
+    </qresource>
+</RCC>

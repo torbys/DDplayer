@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlayList</class>
+ <widget class="QWidget" name="PlayList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>250</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>250</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="verticalSpacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignVCenter">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget{
+	background-color:#171D1D;
+	font: 436 14pt &quot;JetBrains Mono&quot;;
+	border: 1px solid #69655B; 
+}
+</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,0,0">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">color: #F8F8F8;
+font: 436 14pt &quot;JetBrains Mono&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>播放列表</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QPushButton" name="serchBtn">
+        <property name="minimumSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+	
+	image: url(:/media/icon/Search.png);
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+	
+	image: url(:/media/icon/SearchSelected.png);
+}
+
+/* 按下效果也去掉（可选，建议保留一点点反馈）*/
+QPushButton:pressed {
+    background: transparent;
+ 
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addBtn">
+        <property name="minimumSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>25</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+	
+	image: url(:/media/icon/Plus.png);
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+	
+	image: url(:/media/icon/PlusSelected.png);
+}
+
+/* 按下效果也去掉（可选，建议保留一点点反馈）*/
+QPushButton:pressed {
+    background: transparent;
+ 
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QListWidget" name="videoList">
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* ========== PlayList 整体 ========== */
+PlayList {
+    background-color: #171D1D; /* 使用深黑灰作为总背景 */
+    border: none;
+}
+
+/* ========== 列表区域 ========== */
+QListWidget#videoList {
+    background-color: #171D1D; /* 深黑灰背景 */
+    border: 1px solid #69655B; /* 褐灰边框，低调且有质感 */
+    outline: none;
+    show-decoration-selected: 0;
+}
+
+/* ========== Item 基础 ========== */
+QListWidget#videoList::item {
+    font-weight: bold;
+    background-color: #171D1D; /* 默认背景色 */
+    color: #DBDBD8; /* 浅灰白文字，柔和不刺眼 */
+    padding: 6px 8px;
+    margin: 4px 8px;  
+    height: 70px;
+    border-radius: 4px; /* 增加微小圆角提升现代感 */
+}
+
+/* ========== Item 悬停 ========== */
+QListWidget#videoList::item:hover {
+    background-color: rgba(0,0,0,0.1); /* 冷灰悬停，产生金属铝材的视觉感 */
+    color: #FFFFFF; /* 悬停时文字纯白 */
+}
+
+/* ========== Item 选中 ========== */
+QListWidget#videoList::item:selected {
+    background-color: rgba(0,0,0,1);/* 暖黄/金色选中态，典型的“高级黑金”配色 */
+    color: #171D1D; /* 选中时文字变为深色，保证极高辨识度 */
+    font-weight: bold;
+}
+
+/* 选中态的悬停（保持金色） */
+QListWidget#videoList::item:selected:hover {
+    background-color: rgba(0,0,0,0.2);
+    color: #171D1D;
+}
+
+/* ========== 滚动条美化 ========== */
+/* 竖直滚动条整体 */
+QListWidget#videoList QScrollBar:vertical {
+    background-color: #171D1D;
+    width: 8px;
+    border-radius: 4px;
+    margin: 4px 0;
+}
+
+/* 滚动条滑块 */
+QListWidget#videoList QScrollBar::handle:vertical {
+    background-color: #69655B; /* 褐灰滑块，与背景融合 */
+    min-height: 30px;
+    border-radius: 4px;
+    margin: 0 2px;
+}
+
+/* 滑块悬停 */
+QListWidget#videoList QScrollBar::handle:vertical:hover {
+    background-color: #8B8D95; /* 冷灰，增加亮度反馈 */
+}
+
+/* 滑块按下 */
+QListWidget#videoList QScrollBar::handle:vertical:pressed {
+    background-color: #D5B44F; /* 按下时变为金色反馈 */
+}
+
+/* 去掉上下箭头按钮 */
+QListWidget#videoList QScrollBar::add-line:vertical,
+QListWidget#videoList QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: transparent;
+}
+
+/* 滚动条背景槽 */
+QListWidget#videoList QScrollBar::add-page:vertical,
+QListWidget#videoList QScrollBar::sub-page:vertical {
+    background-color: transparent;
+}</string>
+     </property>
+     <property name="isWrapping" stdset="0">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
