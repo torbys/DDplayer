@@ -1,0 +1,35 @@
+# 编译输出目录
+build/
+build-*/
+debug/
+release/
+
+# 编译中间文件
+*.o
+*.obj
+*.exe
+*.dll
+*.ilk
+*.exp
+*.lib
+*.so
+*.dylib
+
+# Qt Creator 用户配置
+*.user
+*.user.*
+*.pro.user
+
+# Qt自动生成代码
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# 第三方预编译库，不上传
+onnxruntime-win-x64-gpu-1.26.0/
+
+# IDE、系统隐藏文件
+.DS_Store
+.idea/
+.vscode/
+*.log

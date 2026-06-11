@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CtrlBar</class>
+ <widget class="QWidget" name="CtrlBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>730</width>
+    <height>102</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>60</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>110</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>45</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,0">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QSlider" name="VideoSlider">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>45</height>
+         </size>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="vioce">
+           <property name="minimumSize">
+            <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+}
+
+/* 按下效果也去掉（可选，建议保留一点点反馈）*/
+QPushButton:pressed {
+    background: transparent;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/media/icon/VolumeLoud.png</normaloff>:/media/icon/VolumeLoud.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="VioceSlider">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="leftMargin">
+      <number>5</number>
+     </property>
+     <property name="horizontalSpacing">
+      <number>3</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="8">
+      <widget class="QPushButton" name="NextBtn">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LayoutDirection::RightToLeft</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+	padding:4px;
+	image: url(:/media/icon/Next.png);
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+	padding:4px;
+	image: url(:/media/icon/NextSelected.png);
+}
+
+/* 按下效果也去掉（可选，建议保留一点点反馈）*/
+QPushButton:pressed {
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="13">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="15">
+      <widget class="QPushButton" name="SettingBtn">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+    padding: 6px 12px;
+	image: url(:/media/icon/Setting.png);
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+	
+	image: url(:/media/icon/SettingSelected.png);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="9">
+      <widget class="QPushButton" name="SpeedBtn">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  
+	font: 472 12pt &quot;JetBrains Mono&quot;;
+	font-weight:bold;
+	color:#ffffff;
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+}
+
+/* 按下效果也去掉（可选，建议保留一点点反馈）*/
+QPushButton:pressed {
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>倍数 × 1.0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QPushButton" name="PreBtn">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+	image: url(:/media/icon/Previous.png);
+	padding:4px;
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+	padding:4px;
+	image: url(:/media/icon/PreviousSelected.png);
+}
+
+/* 按下效果也去掉（可选，建议保留一点点反馈）*/
+QPushButton:pressed {
+    background: transparent;
+ 
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="5" alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+      <widget class="QPushButton" name="StopBtn">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+	padding:14px;
+	image: url(:/media/icon/Stop.png);
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+	padding:14px;
+	
+	image: url(:/media/icon/StopSelected.png);
+}
+
+/* 按下效果也去掉（可选，建议保留一点点反馈）*/
+QPushButton:pressed {
+    background: transparent;
+ 
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QTimeEdit" name="timeEdit_total">
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTimeEdit {
+    /* 透明背景 */
+    background: transparent;
+    border: none;
+    color: white;
+    selection-background-color: transparent;
+}
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+       </property>
+       <property name="displayFormat">
+        <string>HH:mm:ss</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QTimeEdit" name="timeEdit_Now">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTimeEdit {
+    /* 透明背景 */
+    background: transparent;
+    border: none;
+    color: white;
+    selection-background-color: transparent;
+}
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+       </property>
+       <property name="currentSection">
+        <enum>QDateTimeEdit::Section::HourSection</enum>
+       </property>
+       <property name="displayFormat">
+        <string>HH:mm:ss</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QPushButton" name="PlayBtn">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+	padding-left:8px;
+	image: url(:/media/icon/Play.png);
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+	cursor: pointer;
+    border: none;
+	
+	image: url(:/media/icon/PlaySelected.png);
+}
+
+/* 按下效果也去掉（可选，建议保留一点点反馈）*/
+QPushButton:pressed {
+    background: transparent;
+ 
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="16">
+      <widget class="QPushButton" name="PlayListBtn">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+    padding: 6px 12px;
+	image: url(:/media/icon/Menu.png);
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+	image: url(:/media/icon/MenuSelected.png);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">
+color:#ffffff;
+</string>
+       </property>
+       <property name="text">
+        <string>/</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="14">
+      <widget class="QPushButton" name="NetBtn">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    /* 去掉边框和默认背景 */
+    border: none;
+    background: transparent;  /* 或者用纯色：#333333 */
+    color: #cccccc;           /* 文字颜色 */
+    padding: 6px 12px;
+	
+	image: url(:/media/icon/Net.png);
+}
+
+/* 关键：必须覆盖 hover，否则 Qt 默认会画灰色渐变 */
+QPushButton:hover {
+    background: transparent;  /* 保持和上面一样，就不变色了 */
+    color: #ffffff;           /* 可以让文字变亮，但背景不动 */
+    border: none;
+	
+	image: url(:/media/icon/NetSelected.png);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
